@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa; /* Color de fondo más claro */
 }
 
 header, nav, section, footer {
@@ -14,13 +14,25 @@ header, nav, section, footer {
     max-width: 800px;
 }
 
-header h1, nav h2, section h2, footer p {
+header h1 {
+    color: #007BFF; /* Color azul para el encabezado principal */
+    text-align: center;
+}
+
+nav h2, section h2 {
+    color: #343a40; /* Color gris oscuro para los subtítulos */
+    text-align: center;
+}
+
+footer p {
+    color: #ffffff; /* Texto en blanco en el pie de página */
     text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -30,7 +42,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #007BFF; /* Color azul para los enlaces */
+    font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -48,6 +61,7 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    border: 2px solid #007BFF; /* Bordes azules para las imágenes */
 }
 
 table {
@@ -58,6 +72,33 @@ table {
 table, th, td {
     border: 1px solid #ddd;
 }
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF; /* Encabezados de tabla azules */
+    color: #ffffff; /* Texto blanco en los encabezados de tabla */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef; /* Color de fondo para la fila cuando se pasa el cursor por encima */
+}
+
+footer {
+    background-color: #007BFF; /* Color azul para el pie de página */
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+
 
 th, td {
     padding: 10px;
