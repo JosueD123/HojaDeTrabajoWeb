@@ -1,114 +1,77 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Color de fondo más claro */
+    padding-top: 56px; /* Espacio para la navbar fija */
 }
 
-header, nav, section, footer {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-
-header h1 {
-    color: #007BFF; /* Color azul para el encabezado principal */
+/* Estilo para el pie de página */
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
     text-align: center;
-}
-
-nav h2, section h2 {
-    color: #343a40; /* Color gris oscuro para los subtítulos */
-    text-align: center;
-}
-
-footer p {
-    color: #ffffff; /* Texto en blanco en el pie de página */
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #007BFF; /* Color azul para los enlaces */
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid #007BFF; /* Bordes azules para las imágenes */
-}
-
-table {
+    position: fixed;
     width: 100%;
-    border-collapse: collapse;
+    bottom: 0;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+/* Personalización de colores */
+:root {
+    --bs-primary: #ff5733; /* Color primario personalizado */
+    --bs-secondary: #33c1ff; /* Color secundario personalizado */
+    --bs-success: #28a745; /* Color de éxito personalizado */
+    --bs-info: #17a2b8; /* Color de información personalizado */
+    --bs-warning: #ffc107; /* Color de advertencia personalizado */
+    --bs-danger: #dc3545; /* Color de peligro personalizado */
+    --bs-light: #f8f9fa; /* Color claro personalizado */
+    --bs-dark: #343a40; /* Color oscuro personalizado */
 }
 
-th, td {
-    padding: 10px;
-    text-align: center;
+/* Estilo personalizado para las cards */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-th {
-    background-color: #007BFF; /* Encabezados de tabla azules */
-    color: #ffffff; /* Texto blanco en los encabezados de tabla */
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #e9ecef; /* Color de fondo para la fila cuando se pasa el cursor por encima */
-}
-
-footer {
-    background-color: #007BFF; /* Color azul para el pie de página */
-    text-align: center;
-    padding: 10px;
-    color: white;
-    border-radius: 0 0 10px 10px;
+.card:hover {
+    transform: scale(1.05);
 }
 
 
-th, td {
-    padding: 10px;
-    text-align: center;
+/* Estilo para el carrusel */
+.carousel-item img {
+    height: 500px; /* Altura de las imágenes en el carrusel */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el área del carrusel */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 0 0 10px 10px;
+/* Estilos para los modales */
+.modal-content {
+    border-radius: 0; /* Bordes cuadrados para los modales */
+}
+
+.modal-header {
+    background-color: var(--bs-primary); /* Fondo del encabezado del modal */
+    color: #fff; /* Color del texto del encabezado del modal */
+}
+
+.modal-footer {
+    background-color: var(--bs-light); /* Fondo del pie del modal */
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 300px; /* Altura ajustada para pantallas pequeñas */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .carousel-item img {
+        height: 400px; /* Altura ajustada para pantallas medianas */
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-item img {
+        height: 500px; /* Altura por defecto para pantallas grandes */
+    }
 }

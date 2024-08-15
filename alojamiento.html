@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alojamiento - Excursión a París</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Excursión a París</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="atracciones.html">Atracciones</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="alojamiento.html">Alojamiento</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Alojamiento en París</h1>
+        <p>Encuentra los mejores lugares para hospedarte durante tu visita a París.</p>
+
+        <!-- Tabs para alojamiento -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="hotels-tab" data-bs-toggle="tab" data-bs-target="#hotels" type="button" role="tab">Hoteles</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="hostels-tab" data-bs-toggle="tab" data-bs-target="#hostels" type="button" role="tab">Hostales</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="apartments-tab" data-bs-toggle="tab" data-bs-target="#apartments" type="button" role="tab">Apartamentos</button>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3" id="myTabContent">
+            <!-- Sección Hoteles -->
+            <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
+                <h3>Hoteles</h3>
+                <p>Explora nuestros hoteles recomendados en París.</p>
+
+                <!-- Contenido de Hoteles -->
+                <div class="card mb-3">
+                    <img src="https://le-meurice-hotel-paris.at-hotels.com/data/Photos/OriginalPhoto/12740/1274017/1274017705/le-meurice-hotel-paris-photo-85.JPEG" class="card-img-top" alt="Hotel">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Le Meurice</h5>
+                        <p class="card-text">Ubicado en el corazón de París, este hotel de lujo ofrece vistas impresionantes a los Jardines de las Tullerías.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leMeuriceModal">Más información</button>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <img src="https://p.monumentum.fr/main/75/pa00085826-paris-1er-arrondissement-anciens-hotels-de-gramont-et-crozat-actuellement-hotel-ritz.jpg" class="card-img-top" alt="Hotel">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Ritz París</h5>
+                        <p class="card-text">El icónico Ritz ofrece una experiencia de lujo sin igual, combinando elegancia histórica con comodidades modernas.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ritzModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Hostales -->
+            <div class="tab-pane fade" id="hostels" role="tabpanel" aria-labelledby="hostels-tab">
+                <h3>Hostales</h3>
+                <p>Encuentra opciones económicas para hospedarte en hostales.</p>
+
+                <!-- Contenido de Hostales -->
+                <div class="card mb-3">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/222412191.jpg?k=7763a3a0de87af70b29fc38884d1a8889bc36da62fd23651a5eac281b7529b3d&o=&hp=1" class="card-img-top" alt="Hostal">
+                    <div class="card-body">
+                        <h5 class="card-title">Le Village Montmartre</h5>
+                        <p class="card-text">Situado en el encantador barrio de Montmartre, este hostal ofrece un ambiente acogedor y vistas increíbles de la ciudad.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#montmartreModal">Más información</button>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <img src="https://images.adsttc.com/media/images/557e/352d/e58e/ced6/2800/0318/newsletter/GenParis_DesignAgency_20.jpg?1434334499" class="card-img-top" alt="Hostal">
+                    <div class="card-body">
+                        <h5 class="card-title">Generator Paris</h5>
+                        <p class="card-text">Moderno y elegante, Generator Paris es ideal para viajeros jóvenes que buscan una experiencia urbana a un precio asequible.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generatorModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Apartamentos -->
+            <div class="tab-pane fade" id="apartments" role="tabpanel" aria-labelledby="apartments-tab">
+                <h3>Apartamentos</h3>
+                <p>Busca apartamentos confortables y bien ubicados.</p>
+
+                <!-- Contenido de Apartamentos -->
+                <div class="card mb-3">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/302421848.jpg?k=9a6c05e9553eacccd45dcfdcd837df0192cfe7f36ce90d369bbd477f05c01c3c&o=&hp=1" class="card-img-top" alt="Apartamento">
+                    <div class="card-body">
+                        <h5 class="card-title">Apartamentos Citadines Les Halles</h5>
+                        <p class="card-text">Estos modernos apartamentos están ubicados en el centro de París, cerca de Les Halles, y ofrecen comodidad y privacidad.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#citadinesModal">Más información</button>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <img src="https://www.residence-charles-floquet.fr/_novaimg/galleria/1533523.jpg" class="card-img-top" alt="Apartamento">
+                    <div class="card-body">
+                        <h5 class="card-title">Résidence Charles Floquet</h5>
+                        <p class="card-text">Con vistas a la Torre Eiffel, estos amplios apartamentos ofrecen una estancia lujosa con todas las comodidades del hogar.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#floquetModal">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+
+    <!-- Modal Hotel Le Meurice -->
+    <div class="modal fade" id="leMeuriceModal" tabindex="-1" aria-labelledby="leMeuriceLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leMeuriceLabel">Hotel Le Meurice</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El Hotel Le Meurice es un símbolo de la elegancia parisina. Con sus lujosas habitaciones, decoración clásica y vistas a los Jardines de las Tullerías, es la elección perfecta para quienes buscan una experiencia única en París.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hotel Ritz París -->
+    <div class="modal fade" id="ritzModal" tabindex="-1" aria-labelledby="ritzLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ritzLabel">Hotel Ritz París</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El Ritz París ofrece un lujo atemporal en el corazón de la ciudad. Desde su apertura en 1898, ha sido sinónimo de sofisticación y un refugio para los más exigentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hostal Le Village Montmartre -->
+    <div class="modal fade" id="montmartreModal" tabindex="-1" aria-labelledby="montmartreLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="montmartreLabel">Le Village Montmartre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Le Village Montmartre ofrece una experiencia auténtica y acogedora en uno de los barrios más encantadores de París. Ideal para viajeros que desean sumergirse en la cultura local.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hostal Generator Paris -->
+    <div class="modal fade" id="generatorModal" tabindex="-1" aria-labelledby="generatorLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="generatorLabel">Generator Paris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Generator Paris combina estilo, asequibilidad y una ubicación céntrica, haciendo de él una opción popular entre los jóvenes viajeros. El ambiente animado y moderno es perfecto para quienes buscan una experiencia urbana y social.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Apartamentos Citadines Les Halles -->
+    <div class="modal fade" id="citadinesModal" tabindex="-1" aria-labelledby="citadinesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="citadinesLabel">Apartamentos Citadines Les Halles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los Apartamentos Citadines Les Halles ofrecen la comodidad de un hogar en el corazón de París, con servicios hoteleros disponibles para una estancia sin preocupaciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Apartamentos Résidence Charles Floquet -->
+    <div class="modal fade" id="floquetModal" tabindex="-1" aria-labelledby="floquetLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="floquetLabel">Résidence Charles Floquet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Con una ubicación privilegiada junto a la Torre Eiffel, Résidence Charles Floquet ofrece apartamentos espaciosos y bien equipados para una estancia inolvidable en París.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+    <footer>
+        <p>Desarrollado por Josué Andrés López Díaz</p>
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
