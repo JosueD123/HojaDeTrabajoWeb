@@ -25,6 +25,50 @@ footer {
     --bs-dark: #343a40; /* Color oscuro personalizado */
 }
 
+.navbar {
+    background-color: #343a40; /* Color de fondo oscuro */
+    padding: 1rem 0; /* Espaciado vertical */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1589a7;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #190ea8;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Color de hover */
+}
+
+.navbar-toggler {
+    border-color: #c25252;
+}
+
+.navbar-toggler-icon {
+    background-color: #2f748f;
+}
+
+/* Navbar personalizado */
+.navbar-custom {
+    background-color: #007BFF; /* Un azul vibrante */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #FFD700; /* Un color dorado al pasar el cursor */
+}
+
 /* Estilo personalizado para las cards */
 .card {
     margin-bottom: 20px;
