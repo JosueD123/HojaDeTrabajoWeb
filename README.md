@@ -34,7 +34,7 @@ El sitio web está compuesto por las siguientes páginas:
    
 ## Desarrollador
 
-Josue Andre Lopez Diaz
+Josue Andre Lopez Diaz No.Carne 9490 - 21 - 7374
 
 ## Enlace del sitio web publicado
 
