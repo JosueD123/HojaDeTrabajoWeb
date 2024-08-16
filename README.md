@@ -30,7 +30,7 @@ El sitio web está compuesto por las siguientes páginas:
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone [URL del repositorio]
+   git clone [https://github.com/JosueD123/HojaDeTrabajoWeb.git]
    
 ## Desarrollador
 
@@ -38,4 +38,4 @@ Josue Andre Lopez Diaz
 
 ## Enlace del sitio web publicado
 
-https://glittery-pegasus-22d00c.netlify.app
+https://spectacular-medovik-1ee7c3.netlify.app
