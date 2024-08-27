@@ -26,6 +26,9 @@ El sitio web está compuesto por las siguientes páginas:
 ### 3. **Personalización de Colores**
    - Los colores de Bootstrap han sido personalizados para que coincidan con la paleta visual deseada para el sitio web, proporcionando una experiencia visual coherente.
 
+### 4. **Area de Comentarios y Formulario de contacto**
+Este proyecto incluye un área de comentarios generados aleatoriamente y un formulario de contacto. Los comentarios son seleccionados al azar de una lista de nombres y mensajes, y el formulario permite la validación de entrada y muestra una confirmación mediante un modal de Bootstrap.
+
 ## Instalación
 
 1. **Clonar el repositorio**:
