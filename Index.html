@@ -6,6 +6,17 @@
     <title>Inicio - Excursión a París</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <style>
+        .comment-section {
+            margin-top: 30px;
+        }
+        .comment {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -28,8 +39,6 @@
         </div>
     </nav>
     
-    
-
     <div class="container mt-5">
         <h1>Bienvenido a la Excursión a París</h1>
         <p>Explora lo mejor de París con nuestras guías y recomendaciones.</p>
@@ -61,13 +70,120 @@
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
+
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <h2>Comentarios</h2>
+            <div id="comments-container">
+                <!-- Comments will be injected here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form mt-5">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¡Tu información se ha registrado correctamente!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
         <p>Desarrollado por Josué Andrés López Díaz</p>
-    </footer>
+    </footer><br><br><br><br><br>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript for Comments
+        const names = ["Ana", "Luis", "Carlos", "Maria", "Sofía", "Pedro", "Laura", "Jorge", "Elena", "David"];
+        const comments = [
+            "¡Gran lugar para visitar en familia!",
+            "Las vistas de la Torre Eiffel son impresionantes.",
+            "Recomendado para todos los amantes de la cultura.",
+            "La comida es deliciosa y la gente es amable.",
+            "Una experiencia inolvidable.",
+            "Los museos son fascinantes y bien mantenidos.",
+            "Los paseos por el Sena son muy relajantes.",
+            "París siempre tiene algo nuevo que ofrecer.",
+            "Una ciudad llena de historia y arte.",
+            "La arquitectura es simplemente espectacular."
+        ];
+
+        function getRandomItems(arr, count) {
+            let result = [];
+            while (result.length < count) {
+                let item = arr[Math.floor(Math.random() * arr.length)];
+                if (!result.includes(item)) {
+                    result.push(item);
+                }
+            }
+            return result;
+        }
+
+        const randomNames = getRandomItems(names, 3);
+        const randomComments = getRandomItems(comments, 3);
+
+        const commentsContainer = document.getElementById('comments-container');
+        randomNames.forEach((name, index) => {
+            const commentDiv = document.createElement('div');
+            commentDiv.classList.add('comment');
+            commentDiv.innerHTML = `
+                <h5>${name}</h5>
+                <p>${randomComments[index]}</p>
+            `;
+            commentsContainer.appendChild(commentDiv);
+        });
+
+        // JavaScript for Form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const dob = document.getElementById('dob').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            console.log('Nombre:', name);
+            console.log('Fecha de Nacimiento:', dob);
+            console.log('Correo Electrónico:', email);
+            console.log('Mensaje:', message);
+
+            const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            modal.show();
+        });
+    </script>
 </body>
 </html>
-
