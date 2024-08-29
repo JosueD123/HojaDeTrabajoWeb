@@ -41,4 +41,4 @@ Josue Andre Lopez Diaz No.Carne 9490 - 21 - 7374
 
 ## Enlace del sitio web publicado
 
-https://spectacular-medovik-1ee7c3.netlify.app
+https://shiny-torte-021d9e.netlify.app
